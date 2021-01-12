@@ -2,6 +2,7 @@ FROM innovanon/doom-base as xz
 ARG LFS=/mnt/lfs
 USER lfs
 RUN sleep 31 \
+ && command -v strip.sh                 \
  && git clone --depth=1 --recursive     \
       https://github.com/xz-mirror/xz.git \
  && cd                           xz     \
