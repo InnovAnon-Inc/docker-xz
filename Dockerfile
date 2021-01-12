@@ -7,6 +7,7 @@ RUN sleep 31 \
  && cd                           xz     \
  && ./autogen.sh                        \
  && ./configure                         \
+      --disable-shared --enable-static  \
  && make                                \
  && make DESTDIR=/tmp/xz install        \
  && cd           /tmp/xz                \
