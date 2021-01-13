@@ -14,7 +14,7 @@ RUN sleep 31 \
  && make DESTDIR=/tmp/xz install        \
  && cd           /tmp/xz                \
  && strip.sh .                          \
- && tar acf        ../xz.txz .          \
+ && tar  pacf        ../xz.txz .          \
  && rm -rf          $LFS/sources/xz
 
 FROM scratch as final
